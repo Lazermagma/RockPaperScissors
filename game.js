@@ -26,27 +26,80 @@ Rock Paper Scissors is often used as a fair choosing method between two people,
 */                            
 
 
-let choice = ['Rock' , 'Paper', 'Scissors'];
+
+
+
 
 
 // A function to randomize choice length 
 
-function randomInt(x){
+/*function randomInt(choice){
 
 
-   return Math.floor(Math.random() * Math.floor(x));
-}
+   return Math.floor(Math.random() * Math.floor(choice));
+}*/
 
+function capitalizeFirstLetter(str) {
+   return str[0] + str.slice(1).toLowerCase();
+ }
 
 // A function to get random computer choice 
 
-function getComputerChoice(choice){
+function getComputerChoice()
+{
 
-let index =  randomInt(choice.length);
+let choice = ['ROCK' , 'PAPER', 'SCISSORS'];
 
-return choice[index];
+
+return choice[Math.floor(Math.random() * choice.length)];
 
 }
+
+function playRound(PlayerSelection , ComputerSelection)
+{
+    // to ensure that the player and computer selection is case insensitive 
+
+   PlayerSelection = PlayerSelection.toUpperCase();
+  // ComputerSelection = ComputerSelection.toUpperCase();
+   
+   if (PlayerSelection == ComputerSelection)
+   {
+      return "It is a draw ! no one lose";
+   }
+   
+  else  if ( PlayerSelection == 'ROCK' && ComputerSelection == 'SCISSORS' ){
+          return "You win! Rock beats Scissors";
+   }
+   else if (PlayerSelection ==  'SCISSORS' && ComputerSelection == 'PAPER'){
+       return "You win! Scissors beats Paper";
+   }
+   else if (PlayerSelection == 'PAPER' && ComputerSelection == 'ROCK'){
+      return "You win! Paper beats Rock";
+   }
+   else {
+      return `You lose! ${capitalizeFirstLetter(ComputerSelection)} beats ${capitalizeFirstLetter(PlayerSelection)}`; 
+   }
+  
+}
+
+function game(){
+
+
+ for ( i=0 ; i<=5 ; i++)
+{
+const PlayerSelection = prompt(" Please select Rock , Paper or Scissors:");
+const ComputerSelection = getComputerChoice();
+console.log(playRound(PlayerSelection,ComputerSelection));
+   
+}
+
+}
+
+// Calling the game function
+
+game();
+
+
 
 
 
