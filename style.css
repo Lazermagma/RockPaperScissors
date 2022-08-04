@@ -1,0 +1,171 @@
+
+body{
+    background-image: url("https://i.gifer.com/5EDx.gif");
+    margin: 0;
+    border: 0;
+    height: auto;
+}
+
+.playerButtons-location{
+    position: relative;
+    top: 550px ;
+    padding-bottom: 35px;    
+              
+
+
+}
+.playerButtons{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    justify-content: center;
+   
+   
+    
+
+    
+}
+
+button.rock-btn img ,button.scissors-btn img  ,.paper-btn img {
+grid-area: main;
+padding: 3px;
+
+align-items: center;
+cursor: pointer;
+width: 200px;
+height: 200px;
+
+
+transition: .2s ease-in-out 0s;
+border: none;
+
+}
+
+button.rock-btn {
+    background-color: rgba(0, 0, 0, 0.757);
+  
+}
+button.paper-btn {
+    background-color: rgba(130, 130, 130, 0)
+  
+}
+button.scissors-btn {
+    background-color: rgba(240, 248, 255, 0);
+   
+   
+}
+
+/*image hovering */
+button.rock-btn img:hover{
+    transform: scale(1.25);
+}
+button.paper-btn img:hover{
+    transform: scale(1.25);
+}
+button.scissors-btn img:hover{
+    transform: scale(1.25);
+}
+
+
+
+
+body{
+  font-family: 'Press Start 2P', cursive;
+ 
+}
+.arcade{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 90px;
+  color: white;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 5px;
+  text-shadow: -2px 0 0 #fdff2a,
+    -4px 0 0 #df4a42,
+    2px 0 0 #91fcfe,
+    4px 0 0 #4405fc;
+  animation: blink 1s steps(4, start) infinite;
+}
+
+.arcade-1{
+    position: relative;
+    top: 0px;
+    left: 165px;
+    bottom: 100px;
+    right: 0px;
+    height: 90px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 5px;
+    text-shadow: -2px 0 0 #fdff2a,
+      -4px 0 0 #df4a42,
+      2px 0 0 #91fcfe,
+      4px 0 0 #4405fc;
+    animation: blink 1s steps(4, start) infinite;
+  }
+  .arcade-2{
+    position: absolute;
+    top: 167px;
+    left: 10px;
+    bottom: 0;
+    right: 0;
+    height: 90px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 5px;
+    text-shadow: -2px 0 0 #fdff2a,
+      -4px 0 0 #df4a42,
+      2px 0 0 #91fcfe,
+      4px 0 0 #4405fc;
+    animation: blink 1s steps(4, start) infinite;
+  }
+  .arcade-3{
+    position: absolute;
+    top: 160px;
+    left: 335px;
+    bottom: 0;
+    right: 0;
+    height: 90px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 5px;
+    text-shadow: -2px 0 0 #fdff2a,
+      -4px 0 0 #df4a42,
+      2px 0 0 #91fcfe,
+      4px 0 0 #4405fc;
+    animation: blink 1s steps(4, start) infinite;
+  }
+
+.arcadePosition{
+    top: 100px;
+    position: relative;
+}
+
+.grid-arcade{
+     
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+
+}
+    
+ 

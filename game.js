@@ -82,22 +82,72 @@ function playRound(PlayerSelection , ComputerSelection)
   
 }
 
-function game(){
+/*function game(){
 
 
- for ( i=0 ; i<=5 ; i++)
-{
+
 const PlayerSelection = prompt(" Please select Rock , Paper or Scissors:");
 const ComputerSelection = getComputerChoice();
 console.log(playRound(PlayerSelection,ComputerSelection));
    
-}
+
+
+}*/
+
+
+
+
+const rock = document.getElementById("rock-btn");
+const paper = document .getElementById("paper-btn");
+const scissors = document.getElementById("scissors-btn");
+
+
+function rockPrint(){
+   const ComputerSelection = getComputerChoice();
+   return playRound("ROCK",ComputerSelection);
 
 }
+function paperPrint(){
+   const ComputerSelection = getComputerChoice();
+   return playRound("PAPER",ComputerSelection);
+   
+}
+function scissorsPrint(){
+   const ComputerSelection = getComputerChoice();
+   return playRound("SCISSORS",ComputerSelection);
+   
+}
+
+function showWinner(){
+   const winner = document.getElementById("winner");
+  // winner.textContent = 
+
+}
+
+
+
+rock.addEventListener("click" , function(){
+   console.clear();
+   rockPrint();
+});
+paper.addEventListener("click" ,function(){
+   console.clear();
+   paperPrint();
+});
+scissors.addEventListener("click" ,function(){
+   console.clear();
+   scissorsPrint();
+});
+
+
+
+
+
+
 
 // Calling the game function
 
-game();
+//game();
 
 
 //trial
