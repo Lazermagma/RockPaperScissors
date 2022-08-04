@@ -118,9 +118,18 @@ function scissorsPrint(){
    
 }
 
-function showWinner(){
+function showWinner(selection){
    const winner = document.getElementById("winner");
-  // winner.textContent = 
+   if (selection = "rock"){
+  winner.textContent = rockPrint();
+
+   }
+   else if (selection = "paper"){
+      winner.textContent = paperPrint();
+   }
+   else if (selection = "scissors"){
+      winner.textContent = scissorsPrint();
+   }
 
 }
 
@@ -128,15 +137,15 @@ function showWinner(){
 
 rock.addEventListener("click" , function(){
    console.clear();
-   rockPrint();
+   showWinner("rock");
 });
 paper.addEventListener("click" ,function(){
    console.clear();
-   paperPrint();
+  showWinner("paper");
 });
 scissors.addEventListener("click" ,function(){
    console.clear();
-   scissorsPrint();
+   showWinner("scissors");
 });
 
 
